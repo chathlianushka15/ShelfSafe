@@ -12,7 +12,7 @@ app.use(cors({
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://shukach15_db_user:shelfsafe123@cluster0.yiulodt.mongodb.net/shelfsafe?appName=Cluster0')  .then(() => console.log('✅ MongoDB Connected!'))
+mongoose.connect('mongodb+srv://username:password@cluster.mongodb.net/shelfsafe')  .then(() => console.log('✅ MongoDB Connected!'))
   .catch((err) => console.log('❌ MongoDB Error:', err));
 
 // Test route
