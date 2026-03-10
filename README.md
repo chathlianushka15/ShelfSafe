@@ -81,4 +81,4 @@ ShelfSafe/
 
 ## Developer
 
-Built by [Your Name] as a full stack development project.m domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Built by Anushka as a full stack development project
