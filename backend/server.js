@@ -27,7 +27,7 @@ app.use(session({
   cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // 24 hours
 }));
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/shelfsafe')  .then(() => console.log('✅ MongoDB Connected!'))
+mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://shukach15_db_user:shelfsafe123@cluster0.yiulodt.mongodb.net/shelfsafe?appName=Cluster0')  .then(() => console.log('✅ MongoDB Connected!'))
   .catch((err) => console.log('❌ MongoDB Error:', err));
 
 // Test route
