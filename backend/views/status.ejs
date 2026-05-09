@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShelfSafe Server Status</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f3840; color: white; padding: 40px; }
+    h1 { color: #7ecdd8; }
+    .stat { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>ShelfSafe Server Status</h1>
+  <div class="stat">Status: <%= status %></div>
+  <div class="stat">Environment: <%= env %></div>
+  <div class="stat">Uptime: <%= uptime %> seconds</div>
+  <div class="stat">Time: <%= time %></div>
+</body>
+</html>

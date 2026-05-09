@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: shelfsafe-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+
+  - type: web
+    name: shelfsafe-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://shelfsafe-backend.onrender.com

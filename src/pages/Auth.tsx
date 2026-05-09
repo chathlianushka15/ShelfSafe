@@ -69,7 +69,7 @@ function getPasswordStrength(pw: string): { score: number; label: string; color:
 // ─── Real API calls ───────────────────────────────────────────────────────────
 
 async function apiSignIn(email: string, password: string) {
-  const res = await fetch("http://localhost:3000/api/auth/login", {
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
@@ -82,7 +82,7 @@ async function apiSignIn(email: string, password: string) {
 }
 
 async function apiSignUp(name: string, email: string, password: string) {
-  const res = await fetch("http://localhost:3000/api/auth/register", {
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, password }),

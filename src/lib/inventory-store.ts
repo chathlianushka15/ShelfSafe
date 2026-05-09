@@ -13,7 +13,7 @@ export interface InventoryItem {
   createdAt: string;
 }
 
-const API_URL = 'http://localhost:3000/api/items';
+const API_URL = `${import.meta.env.VITE_API_URL}/api/items`;
 
 // Get JWT token from localStorage
 function getToken(): string {
