@@ -13,6 +13,7 @@ import Insights from "./pages/Insights";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute"; // new
+import SocketNotification from "./components/SocketNotification";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <SocketNotification />
       <BrowserRouter>
         <Routes>
           {/* Public */}

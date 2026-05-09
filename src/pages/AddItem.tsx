@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { AppLayout } from "@/components/AppLayout";
 import { toast } from "@/hooks/use-toast";
 import { addItem, getItems, removeItem, type InventoryItem } from "@/lib/inventory-store";
+import { socket } from "@/lib/socket";
 import {
   Trash2, Carrot, Apple, Milk, Wheat, Flame,
   HeartPulse, Cpu, Refrigerator, Sparkles, Plus,
@@ -102,19 +103,28 @@ const AddItem = () => {
     if (!selectedCategory) {
       toast({ title: "Please select a category", variant: "destructive" }); return;
     }
-    await addItem({
-      category: selectedCategory,
-      name: form.name.trim(),
-      brand: form.brand,
-      quantity: Number(form.quantity) || 1,
-      unit: form.unit,
-      location: form.location,
-      purchaseDate: form.purchaseDate,
-      expiryDate: form.expiryDate,
-      notes: form.notes,
-      quantityRemaining: selectedQuantity.label,
-    });
-    const updatedItems = await getItems();
+   const newItem = await addItem({
+  category: selectedCategory,
+  name: form.name.trim(),
+  brand: form.brand,
+  quantity: Number(form.quantity) || 1,
+  unit: form.unit,
+  location: form.location,
+  purchaseDate: form.purchaseDate,
+  expiryDate: form.expiryDate,
+  notes: form.notes,
+  quantityRemaining: selectedQuantity.label,
+});
+
+// Socket.io — emit item added event to all connected clients
+socket.emit('item-added', newItem);
+
+// Check expiry and emit alert if expiring soon
+if (form.expiryDate) {
+  socket.emit('check-expiry', newItem);
+}
+
+const updatedItems = await getItems();
     setItems(updatedItems);
     const saved = form.name;
     setForm({ name: "", brand: "", quantity: "1", unit: "", location: "", purchaseDate: today, expiryDate: "", notes: "" });

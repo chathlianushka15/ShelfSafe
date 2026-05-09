@@ -80,8 +80,42 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start server
-const PORT = 3000;
-app.listen(PORT, () => {
+const http = require('http');
+const { Server } = require('socket.io');
+
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: 'http://localhost:8080',
+    methods: ['GET', 'POST']
+  }
+});
+
+// Socket.io — full duplex communication
+io.on('connection', (socket) => {
+  console.log('🔌 User connected:', socket.id);
+
+  // Listen for item added event
+  socket.on('item-added', (item) => {
+    console.log('📦 New item added:', item.name);
+    // Broadcast to all connected clients
+    io.emit('inventory-updated', { message: `New item added: ${item.name}`, item });
+  });
+
+  // Listen for expiry alert
+  socket.on('check-expiry', (item) => {
+    const daysLeft = Math.ceil((new Date(item.expiryDate) - Date.now()) / 86400000);
+    if (daysLeft <= 7) {
+      io.emit('expiry-alert', { message: `${item.name} expires in ${daysLeft} days!`, item });
+    }
+  });
+
+  socket.on('disconnect', () => {
+    console.log('🔌 User disconnected:', socket.id);
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
