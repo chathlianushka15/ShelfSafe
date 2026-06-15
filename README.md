@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# ShelfSafe 🛒📦
 
-## Project info
+### Smart Inventory & Expiry Tracking System
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+ShelfSafe is a smart inventory and expiry management platform designed to help reduce product wastage through efficient stock monitoring and expiry tracking. The system focuses on improving inventory visibility for small businesses, retail stores, and local vendors by providing a structured way to manage products before they expire.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Problem Statement
 
-**Use Lovable**
+A significant amount of retail and household product waste occurs due to poor inventory monitoring and lack of timely expiry tracking. Small businesses often rely on manual methods that are inefficient and error-prone.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+ShelfSafe aims to solve this problem by creating a centralized system that:
 
-Changes made via Lovable will be committed automatically to this repo.
+* Tracks inventory in real time
+* Monitors product expiry dates
+* Reduces avoidable wastage
+* Improves stock organization and management
+* Encourages smarter inventory decisions
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✨ Key Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* 📦 Inventory Management
+  Add, update, and organize products efficiently.
 
-Follow these steps:
+* ⏰ Expiry Tracking
+  Monitor expiry dates and identify products nearing expiration.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+* 🔔 Smart Alerts & Notifications
+  Receive alerts for products approaching expiry deadlines.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* 📊 Inventory Insights
+  Analyze stock availability and reduce unnecessary waste.
 
-# Step 3: Install the necessary dependencies.
-npm i
+* 👥 User-Friendly Dashboard
+  Clean and accessible interface for smooth inventory management.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+* 🌱 Sustainability Focus
+  Encourages responsible consumption and waste reduction.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Technologies Used
 
-**Use GitHub Codespaces**
+* Frontend: React.js / HTML / CSS / JavaScript
+* Backend: Node.js / Express.js
+* Database: MongoDB
+* Version Control: Git & GitHub
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 👩‍💻 Team & Leadership
 
-This project is built with:
+This project was developed as part of an innovation-focused collaborative initiative.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Role: Team Leader
 
-## How can I deploy this project?
+* Led an all-women development team of 4 members
+* Coordinated project planning and feature ideation
+* Managed task delegation and development workflows
+* Facilitated collaboration and team communication
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Objectives
 
-Yes, you can!
+* Reduce inventory-related wastage
+* Improve operational efficiency for small businesses
+* Build awareness around sustainable inventory practices
+* Create a scalable inventory management solution
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📚 Learning Outcomes
+
+Through ShelfSafe, the team gained experience in:
+
+* Product design and problem solving
+* Team collaboration and leadership
+* Full-stack development fundamentals
+* Inventory workflow planning
+* User-centered system design
+
+---
+
+## 🌍 Future Scope
+
+* AI-based demand prediction
+* Barcode and QR code integration
+* Mobile application support
+* Cloud-based analytics dashboard
+* Multi-store inventory synchronization
+
+---
+
+## 📌 Project Vision
+
+ShelfSafe is more than an inventory tool — it is a step toward smarter resource management and sustainable retail practices. The project combines technology, organization, and user-focused design to create practical real-world impact.
+
+---
